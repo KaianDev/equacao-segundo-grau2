@@ -48,7 +48,7 @@ function calcular() {
         // Para valor de Delta igual a 0 (Zero)
         }else if(valorDelta == 0 ){
             res.innerHTML +='<p>Δ = 0, logo a equação tem duas raizes reais e iguais, ou seja, uma única raiz real.</p>'
-            res.innerHTML += `<p>X = ${xunico}</p>`
+            res.innerHTML += `<p>X = ${xunico.toFixed(2).replace('.',',')}</p>`
         // Para valor de Delta maior que 0 (Zero)    
         }else {
             console.log(raizX1);
@@ -56,7 +56,7 @@ function calcular() {
             console.log(valorDelta);
             res.innerHTML +='<p>Δ > 0, logo a equação tem duas raizes reais e diferentes.</p>'
             res.innerHTML += `<p> Δ = ${valorDelta}</p>`
-            res.innerHTML += `<p>X' = ${raizX1} <br> X" = ${raizX2}</p>`
+            res.innerHTML += `<p>X' = ${raizX1.toFixed(2).replace('.',',')} <br> X" = ${raizX2.toFixed(2).replace('.',',')}</p>`
         }               
     }
     A.value = ""
