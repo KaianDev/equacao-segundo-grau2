@@ -33,7 +33,15 @@ function calcular() {
         var xunico = equacao2Grau1(numA,numB)
         var raizX1 = equacao2GrauX1(numA,numB,valorDelta)
         var raizX2 = equacao2GrauX2(numA,numB,valorDelta)
-        res.innerHTML = `<p class="equacao">${numA}x² + ${numB}x + ${numC} = 0</p>`
+        if (numB < 0 && numC < 0) {
+            res.innerHTML = `<p class="equacao">${numA}x² ${numB}x ${numC} = 0</p>`
+        } else if (numB < 0) {
+            res.innerHTML = `<p class="equacao">${numA}x² ${numB}x + ${numC} = 0</p>`
+        } else if (numC < 0) {
+            res.innerHTML = `<p class="equacao">${numA}x² + ${numB}x ${numC} = 0</p>`
+        }else {
+            res.innerHTML = `<p class="equacao">${numA}x² + ${numB}x + ${numC} = 0</p>`
+        }
         // Para valor de Delta menor que 0 (Zero)
         if (valorDelta < 0 ){
             res.innerHTML +='<p>Δ < 0, logo a equação não possui valores reais.</p>'
