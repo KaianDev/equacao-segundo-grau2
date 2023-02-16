@@ -33,13 +33,13 @@ function calcular() {
         var xunico = equacao2Grau1(numA,numB)
         var raizX1 = equacao2GrauX1(numA,numB,valorDelta)
         var raizX2 = equacao2GrauX2(numA,numB,valorDelta)
-        if (numB < 0 && numC < 0) {
-            res.innerHTML = `<p class="equacao">${numA}x² ${numB}x ${numC} = 0</p>`
-        } else if (numB < 0) {
-            res.innerHTML = `<p class="equacao">${numA}x² ${numB}x + ${numC} = 0</p>`
-        } else if (numC < 0) {
-            res.innerHTML = `<p class="equacao">${numA}x² + ${numB}x ${numC} = 0</p>`
-        }else {
+        if (numB < 0 && numC < 0) { // B e C negativos
+            res.innerHTML = `<p class="equacao">${numA}x² - ${Math.abs(numB)}x - ${Math.abs(numC)} = 0</p>`
+        } else if (numB < 0) { // B negativo
+            res.innerHTML = `<p class="equacao">${numA}x² - ${Math.abs(numB)}x + ${numC} = 0</p>`
+        } else if (numC < 0) { // C negativo
+            res.innerHTML = `<p class="equacao">${numA}x² + ${numB}x - ${Math.abs(numC)} = 0</p>`
+        }else { // A B C Positivo
             res.innerHTML = `<p class="equacao">${numA}x² + ${numB}x + ${numC} = 0</p>`
         }
         // Para valor de Delta menor que 0 (Zero)
