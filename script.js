@@ -15,11 +15,11 @@ function equacao2Grau1(n1,n2){
 }
 //Calcula o X linha 1
 function equacao2GrauX1(n1,n2,delta) {
-    return (-n2 + Math.sqrt(delta))/2*n1
+    return (-n2 + Math.sqrt(delta))/(2*n1)
 }
 //Calcula o X linha 2
 function equacao2GrauX2(n1,n2,delta) {
-    return (-n2 - Math.sqrt(delta))/2*n1
+    return (-n2 - Math.sqrt(delta))/(2*n1)
 }
 
 function calcular() {
